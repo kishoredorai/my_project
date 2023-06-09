@@ -1,0 +1,1365 @@
+Script started on 2023-06-09 11:06:46+05:30 [TERM="xterm-256color" TTY="/dev/tty1" COLUMNS="120" LINES="30"]
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai[00m$ git config
+[?2004lusage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai[00m$ c[Kgit config user.name
+[?2004lkishoredorai
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai[00m$ cd test 
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ ls
+[?2004l[0m[01;32mtextfile.txt[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ git add .
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ git commit -n [Km[K[Km "First message"
+[?2004lOn branch master
+nothing to commit, working tree clean
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ git clone https://github.com/libgit2/libgit2 mylibgit
+[?2004lCloning into 'mylibgit'...
+remote: Enumerating objects: 122935, done.[K
+remote: Counting objects:   0% (1/122935)[Kremote: Counting objects:   1% (1230/122935)[Kremote: Counting objects:   2% (2459/122935)[Kremote: Counting objects:   3% (3689/122935)[Kremote: Counting objects:   4% (4918/122935)[Kremote: Counting objects:   5% (6147/122935)[Kremote: Counting objects:   6% (7377/122935)[Kremote: Counting objects:   7% (8606/122935)[Kremote: Counting objects:   8% (9835/122935)[Kremote: Counting objects:   9% (11065/122935)[Kremote: Counting objects:  10% (12294/122935)[Kremote: Counting objects:  11% (13523/122935)[Kremote: Counting objects:  12% (14753/122935)[Kremote: Counting objects:  13% (15982/122935)[Kremote: Counting objects:  14% (17211/122935)[Kremote: Counting objects:  15% (18441/122935)[Kremote: Counting objects:  16% (19670/122935)[Kremote: Counting objects:  17% (20899/122935)[Kremote: Counting objects:  18% (22129/122935)[Kremote: Counting objects:  19% (23358/122935)[Kremote: Counting objects:  20% (24587/122935)[Kremote: Counting objects:  21% (25817/122935)[Kremote: Counting objects:  22% (27046/122935)[Kremote: Counting objects:  23% (28276/122935)[Kremote: Counting objects:  24% (29505/122935)[Kremote: Counting objects:  25% (30734/122935)[Kremote: Counting objects:  26% (31964/122935)[Kremote: Counting objects:  27% (33193/122935)[Kremote: Counting objects:  28% (34422/122935)[Kremote: Counting objects:  29% (35652/122935)[Kremote: Counting objects:  30% (36881/122935)[Kremote: Counting objects:  31% (38110/122935)[Kremote: Counting objects:  32% (39340/122935)[Kremote: Counting objects:  33% (40569/122935)[Kremote: Counting objects:  34% (41798/122935)[Kremote: Counting objects:  35% (43028/122935)[Kremote: Counting objects:  36% (44257/122935)[Kremote: Counting objects:  37% (45486/122935)[Kremote: Counting objects:  38% (46716/122935)[Kremote: Counting objects:  39% (47945/122935)[Kremote: Counting objects:  40% (49174/122935)[Kremote: Counting objects:  41% (50404/122935)[Kremote: Counting objects:  42% (51633/122935)[Kremote: Counting objects:  43% (52863/122935)[Kremote: Counting objects:  44% (54092/122935)[Kremote: Counting objects:  45% (55321/122935)[Kremote: Counting objects:  46% (56551/122935)[Kremote: Counting objects:  47% (57780/122935)[Kremote: Counting objects:  48% (59009/122935)[Kremote: Counting objects:  49% (60239/122935)[Kremote: Counting objects:  50% (61468/122935)[Kremote: Counting objects:  51% (62697/122935)[Kremote: Counting objects:  52% (63927/122935)[Kremote: Counting objects:  53% (65156/122935)[Kremote: Counting objects:  54% (66385/122935)[Kremote: Counting objects:  55% (67615/122935)[Kremote: Counting objects:  56% (68844/122935)[Kremote: Counting objects:  57% (70073/122935)[Kremote: Counting objects:  58% (71303/122935)[Kremote: Counting objects:  59% (72532/122935)[Kremote: Counting objects:  60% (73761/122935)[Kremote: Counting objects:  61% (74991/122935)[Kremote: Counting objects:  62% (76220/122935)[Kremote: Counting objects:  63% (77450/122935)[Kremote: Counting objects:  64% (78679/122935)[Kremote: Counting objects:  65% (79908/122935)[Kremote: Counting objects:  66% (81138/122935)[Kremote: Counting objects:  67% (82367/122935)[Kremote: Counting objects:  68% (83596/122935)[Kremote: Counting objects:  69% (84826/122935)[Kremote: Counting objects:  70% (86055/122935)[Kremote: Counting objects:  71% (87284/122935)[Kremote: Counting objects:  72% (88514/122935)[Kremote: Counting objects:  73% (89743/122935)[Kremote: Counting objects:  74% (90972/122935)[Kremote: Counting objects:  75% (92202/122935)[Kremote: Counting objects:  76% (93431/122935)[Kremote: Counting objects:  77% (94660/122935)[Kremote: Counting objects:  78% (95890/122935)[Kremote: Counting objects:  79% (97119/122935)[Kremote: Counting objects:  80% (98348/122935)[Kremote: Counting objects:  81% (99578/122935)[Kremote: Counting objects:  82% (100807/122935)[Kremote: Counting objects:  83% (102037/122935)[Kremote: Counting objects:  84% (103266/122935)[Kremote: Counting objects:  85% (104495/122935)[Kremote: Counting objects:  86% (105725/122935)[Kremote: Counting objects:  87% (106954/122935)[Kremote: Counting objects:  88% (108183/122935)[Kremote: Counting objects:  89% (109413/122935)[Kremote: Counting objects:  90% (110642/122935)[Kremote: Counting objects:  91% (111871/122935)[Kremote: Counting objects:  92% (113101/122935)[Kremote: Counting objects:  93% (114330/122935)[Kremote: Counting objects:  94% (115559/122935)[Kremote: Counting objects:  95% (116789/122935)[Kremote: Counting objects:  96% (118018/122935)[Kremote: Counting objects:  97% (119247/122935)[Kremote: Counting objects:  98% (120477/122935)[Kremote: Counting objects:  99% (121706/122935)[Kremote: Counting objects: 100% (122935/122935)[Kremote: Counting objects: 100% (122935/122935), done.[K
+remote: Compressing objects:   0% (1/33864)[Kremote: Compressing objects:   1% (339/33864)[Kremote: Compressing objects:   2% (678/33864)[Kremote: Compressing objects:   3% (1016/33864)[Kremote: Compressing objects:   4% (1355/33864)[Kremote: Compressing objects:   5% (1694/33864)[Kremote: Compressing objects:   6% (2032/33864)[Kremote: Compressing objects:   7% (2371/33864)[Kremote: Compressing objects:   8% (2710/33864)[Kremote: Compressing objects:   9% (3048/33864)[Kremote: Compressing objects:  10% (3387/33864)[Kremote: Compressing objects:  11% (3726/33864)[Kremote: Compressing objects:  12% (4064/33864)[Kremote: Compressing objects:  13% (4403/33864)[Kremote: Compressing objects:  14% (4741/33864)[Kremote: Compressing objects:  15% (5080/33864)[Kremote: Compressing objects:  16% (5419/33864)[Kremote: Compressing objects:  17% (5757/33864)[Kremote: Compressing objects:  18% (6096/33864)[Kremote: Compressing objects:  19% (6435/33864)[Kremote: Compressing objects:  20% (6773/33864)[Kremote: Compressing objects:  21% (7112/33864)[Kremote: Compressing objects:  22% (7451/33864)[Kremote: Compressing objects:  23% (7789/33864)[Kremote: Compressing objects:  24% (8128/33864)[Kremote: Compressing objects:  25% (8466/33864)[Kremote: Compressing objects:  26% (8805/33864)[Kremote: Compressing objects:  27% (9144/33864)[Kremote: Compressing objects:  28% (9482/33864)[Kremote: Compressing objects:  29% (9821/33864)[Kremote: Compressing objects:  30% (10160/33864)[Kremote: Compressing objects:  31% (10498/33864)[Kremote: Compressing objects:  32% (10837/33864)[Kremote: Compressing objects:  33% (11176/33864)[Kremote: Compressing objects:  34% (11514/33864)[Kremote: Compressing objects:  35% (11853/33864)[Kremote: Compressing objects:  36% (12192/33864)[Kremote: Compressing objects:  37% (12530/33864)[Kremote: Compressing objects:  38% (12869/33864)[Kremote: Compressing objects:  39% (13207/33864)[Kremote: Compressing objects:  40% (13546/33864)[Kremote: Compressing objects:  41% (13885/33864)[Kremote: Compressing objects:  42% (14223/33864)[Kremote: Compressing objects:  43% (14562/33864)[Kremote: Compressing objects:  44% (14901/33864)[Kremote: Compressing objects:  45% (15239/33864)[Kremote: Compressing objects:  46% (15578/33864)[Kremote: Compressing objects:  47% (15917/33864)[Kremote: Compressing objects:  48% (16255/33864)[Kremote: Compressing objects:  49% (16594/33864)[Kremote: Compressing objects:  50% (16932/33864)[Kremote: Compressing objects:  51% (17271/33864)[Kremote: Compressing objects:  52% (17610/33864)[Kremote: Compressing objects:  53% (17948/33864)[Kremote: Compressing objects:  54% (18287/33864)[Kremote: Compressing objects:  55% (18626/33864)[Kremote: Compressing objects:  56% (18964/33864)[Kremote: Compressing objects:  57% (19303/33864)[Kremote: Compressing objects:  58% (19642/33864)[Kremote: Compressing objects:  59% (19980/33864)[Kremote: Compressing objects:  60% (20319/33864)[Kremote: Compressing objects:  61% (20658/33864)[Kremote: Compressing objects:  62% (20996/33864)[Kremote: Compressing objects:  63% (21335/33864)[Kremote: Compressing objects:  64% (21673/33864)[Kremote: Compressing objects:  65% (22012/33864)[Kremote: Compressing objects:  66% (22351/33864)[Kremote: Compressing objects:  67% (22689/33864)[Kremote: Compressing objects:  68% (23028/33864)[Kremote: Compressing objects:  69% (23367/33864)[Kremote: Compressing objects:  70% (23705/33864)[Kremote: Compressing objects:  71% (24044/33864)[Kremote: Compressing objects:  72% (24383/33864)[Kremote: Compressing objects:  73% (24721/33864)[Kremote: Compressing objects:  74% (25060/33864)[Kremote: Compressing objects:  75% (25398/33864)[Kremote: Compressing objects:  76% (25737/33864)[Kremote: Compressing objects:  77% (26076/33864)[Kremote: Compressing objects:  78% (26414/33864)[Kremote: Compressing objects:  79% (26753/33864)[Kremote: Compressing objects:  80% (27092/33864)[Kremote: Compressing objects:  81% (27430/33864)[Kremote: Compressing objects:  82% (27769/33864)[Kremote: Compressing objects:  83% (28108/33864)[Kremote: Compressing objects:  84% (28446/33864)[Kremote: Compressing objects:  85% (28785/33864)[Kremote: Compressing objects:  86% (29124/33864)[Kremote: Compressing objects:  87% (29462/33864)[Kremote: Compressing objects:  88% (29801/33864)[Kremote: Compressing objects:  89% (30139/33864)[Kremote: Compressing objects:  90% (30478/33864)[Kremote: Compressing objects:  91% (30817/33864)[Kremote: Compressing objects:  92% (31155/33864)[Kremote: Compressing objects:  93% (31494/33864)[Kremote: Compressing objects:  94% (31833/33864)[Kremote: Compressing objects:  95% (32171/33864)[Kremote: Compressing objects:  96% (32510/33864)[Kremote: Compressing objects:  97% (32849/33864)[Kremote: Compressing objects:  98% (33187/33864)[Kremote: Compressing objects:  99% (33526/33864)[Kremote: Compressing objects: 100% (33864/33864)[Kremote: Compressing objects: 100% (33864/33864), done.[K
+Receiving objects:   0% (1/122935)Receiving objects:   1% (1230/122935)Receiving objects:   2% (2459/122935)Receiving objects:   3% (3689/122935), 1.08 MiB | 2.00 MiB/sReceiving objects:   4% (4918/122935), 1.08 MiB | 2.00 MiB/sReceiving objects:   5% (6147/122935), 1.08 MiB | 2.00 MiB/sReceiving objects:   5% (6518/122935), 1.08 MiB | 2.00 MiB/sReceiving objects:   6% (7377/122935), 2.37 MiB | 2.28 MiB/sReceiving objects:   7% (8606/122935), 2.37 MiB | 2.28 MiB/sReceiving objects:   8% (9835/122935), 2.37 MiB | 2.28 MiB/sReceiving objects:   9% (11065/122935), 2.37 MiB | 2.28 MiB/sReceiving objects:  10% (12294/122935), 3.46 MiB | 2.24 MiB/sReceiving objects:  11% (13523/122935), 3.46 MiB | 2.24 MiB/sReceiving objects:  12% (14753/122935), 3.46 MiB | 2.24 MiB/sReceiving objects:  12% (15806/122935), 3.46 MiB | 2.24 MiB/sReceiving objects:  13% (15982/122935), 3.46 MiB | 2.24 MiB/sReceiving objects:  14% (17211/122935), 4.59 MiB | 2.24 MiB/sReceiving objects:  15% (18441/122935), 4.59 MiB | 2.24 MiB/sReceiving objects:  16% (19670/122935), 4.59 MiB | 2.24 MiB/sReceiving objects:  17% (20899/122935), 4.59 MiB | 2.24 MiB/sReceiving objects:  18% (22129/122935), 5.64 MiB | 2.20 MiB/sReceiving objects:  19% (23358/122935), 5.64 MiB | 2.20 MiB/sReceiving objects:  20% (24587/122935), 5.64 MiB | 2.20 MiB/sReceiving objects:  20% (25144/122935), 5.64 MiB | 2.20 MiB/sReceiving objects:  21% (25817/122935), 5.64 MiB | 2.20 MiB/sReceiving objects:  22% (27046/122935), 6.96 MiB | 2.27 MiB/sReceiving objects:  23% (28276/122935), 6.96 MiB | 2.27 MiB/sReceiving objects:  24% (29505/122935), 8.57 MiB | 2.40 MiB/sReceiving objects:  25% (30734/122935), 8.57 MiB | 2.40 MiB/sReceiving objects:  25% (31117/122935), 8.57 MiB | 2.40 MiB/sReceiving objects:  25% (31219/122935), 11.36 MiB | 2.48 MiB/sReceiving objects:  25% (31872/122935), 14.52 MiB | 2.67 MiB/sReceiving objects:  26% (31964/122935), 16.24 MiB | 2.81 MiB/sReceiving objects:  27% (33193/122935), 17.79 MiB | 2.90 MiB/sReceiving objects:  28% (34422/122935), 17.79 MiB | 2.90 MiB/sReceiving objects:  28% (34766/122935), 17.79 MiB | 2.90 MiB/sReceiving objects:  29% (35652/122935), 19.73 MiB | 3.10 MiB/sReceiving objects:  30% (36881/122935), 19.73 MiB | 3.10 MiB/sReceiving objects:  31% (38110/122935), 21.83 MiB | 3.28 MiB/sReceiving objects:  32% (39340/122935), 21.83 MiB | 3.28 MiB/sReceiving objects:  32% (40406/122935), 21.83 MiB | 3.28 MiB/sReceiving objects:  33% (40569/122935), 21.83 MiB | 3.28 MiB/sReceiving objects:  34% (41798/122935), 23.81 MiB | 3.36 MiB/sReceiving objects:  35% (43028/122935), 23.81 MiB | 3.36 MiB/sReceiving objects:  36% (44257/122935), 23.81 MiB | 3.36 MiB/sReceiving objects:  37% (45486/122935), 25.53 MiB | 3.40 MiB/sReceiving objects:  38% (46716/122935), 25.53 MiB | 3.40 MiB/sReceiving objects:  38% (46994/122935), 25.53 MiB | 3.40 MiB/sReceiving objects:  39% (47945/122935), 27.17 MiB | 3.49 MiB/sReceiving objects:  40% (49174/122935), 27.17 MiB | 3.49 MiB/sReceiving objects:  41% (50404/122935), 28.93 MiB | 3.55 MiB/sReceiving objects:  41% (50991/122935), 28.93 MiB | 3.55 MiB/sReceiving objects:  42% (51633/122935), 28.93 MiB | 3.55 MiB/sReceiving objects:  43% (52863/122935), 30.96 MiB | 3.62 MiB/sReceiving objects:  44% (54092/122935), 33.18 MiB | 3.73 MiB/sReceiving objects:  44% (55260/122935), 33.18 MiB | 3.73 MiB/sReceiving objects:  45% (55321/122935), 33.18 MiB | 3.73 MiB/sReceiving objects:  46% (56551/122935), 35.39 MiB | 3.88 MiB/sReceiving objects:  47% (57780/122935), 35.39 MiB | 3.88 MiB/sReceiving objects:  48% (59009/122935), 35.39 MiB | 3.88 MiB/sReceiving objects:  49% (60239/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  50% (61468/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  51% (62697/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  52% (63927/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  52% (64643/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  53% (65156/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  54% (66385/122935), 37.47 MiB | 3.90 MiB/sReceiving objects:  55% (67615/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  56% (68844/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  57% (70073/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  58% (71303/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  59% (72532/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  60% (73761/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  61% (74991/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  62% (76220/122935), 39.46 MiB | 3.88 MiB/sReceiving objects:  63% (77450/122935), 41.90 MiB | 3.98 MiB/sReceiving objects:  63% (77869/122935), 41.90 MiB | 3.98 MiB/sReceiving objects:  63% (77936/122935), 45.23 MiB | 3.13 MiB/sReceiving objects:  63% (77941/122935), 45.23 MiB | 3.13 MiB/sReceiving objects:  64% (78679/122935), 47.50 MiB | 3.22 MiB/sReceiving objects:  65% (79908/122935), 47.50 MiB | 3.22 MiB/sReceiving objects:  66% (81138/122935), 47.50 MiB | 3.22 MiB/sReceiving objects:  67% (82367/122935), 47.50 MiB | 3.22 MiB/sReceiving objects:  68% (83596/122935), 47.50 MiB | 3.22 MiB/sReceiving objects:  69% (84826/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  70% (86055/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  70% (86389/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  71% (87284/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  72% (88514/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  73% (89743/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  74% (90972/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  75% (92202/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  76% (93431/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  77% (94660/122935), 51.55 MiB | 3.57 MiB/sReceiving objects:  78% (95890/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  79% (97119/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  80% (98348/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  81% (99578/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  82% (100807/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  83% (102037/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  84% (103266/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  85% (104495/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  86% (105725/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  87% (106954/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  88% (108183/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  89% (109413/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  90% (110642/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  91% (111871/122935), 56.25 MiB | 4.00 MiB/sReceiving objects:  92% (113101/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  93% (114330/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  94% (115559/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  95% (116789/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  96% (118018/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  96% (118375/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  97% (119247/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  98% (120477/122935), 60.86 MiB | 4.41 MiB/sReceiving objects:  99% (121706/122935), 60.86 MiB | 4.41 MiB/sremote: Total 122935 (delta 87605), reused 122281 (delta 87037), pack-reused 0[K
+Receiving objects: 100% (122935/122935), 60.86 MiB | 4.41 MiB/sReceiving objects: 100% (122935/122935), 63.29 MiB | 3.69 MiB/s, done.
+Resolving deltas:   0% (0/87605)Resolving deltas:   1% (877/87605)Resolving deltas:   2% (1753/87605)Resolving deltas:   3% (2629/87605)Resolving deltas:   4% (3505/87605)Resolving deltas:   5% (4381/87605)Resolving deltas:   6% (5257/87605)Resolving deltas:   7% (6133/87605)Resolving deltas:   8% (7009/87605)Resolving deltas:   9% (7885/87605)Resolving deltas:  10% (8761/87605)Resolving deltas:  11% (9637/87605)Resolving deltas:  12% (10513/87605)Resolving deltas:  13% (11390/87605)Resolving deltas:  14% (12265/87605)Resolving deltas:  15% (13141/87605)Resolving deltas:  16% (14017/87605)Resolving deltas:  17% (14893/87605)Resolving deltas:  18% (15769/87605)Resolving deltas:  19% (16645/87605)Resolving deltas:  20% (17521/87605)Resolving deltas:  21% (18398/87605)Resolving deltas:  22% (19274/87605)Resolving deltas:  23% (20150/87605)Resolving deltas:  24% (21026/87605)Resolving deltas:  25% (21902/87605)Resolving deltas:  26% (22778/87605)Resolving deltas:  27% (23654/87605)Resolving deltas:  28% (24530/87605)Resolving deltas:  29% (25406/87605)Resolving deltas:  30% (26282/87605)Resolving deltas:  31% (27158/87605)Resolving deltas:  32% (28034/87605)Resolving deltas:  33% (28910/87605)Resolving deltas:  34% (29786/87605)Resolving deltas:  35% (30662/87605)Resolving deltas:  36% (31538/87605)Resolving deltas:  37% (32414/87605)Resolving deltas:  38% (33290/87605)Resolving deltas:  39% (34166/87605)Resolving deltas:  40% (35042/87605)Resolving deltas:  41% (35919/87605)Resolving deltas:  42% (36795/87605)Resolving deltas:  43% (37671/87605)Resolving deltas:  44% (38547/87605)Resolving deltas:  45% (39423/87605)Resolving deltas:  46% (40299/87605)Resolving deltas:  47% (41175/87605)Resolving deltas:  48% (42051/87605)Resolving deltas:  49% (42927/87605)Resolving deltas:  50% (43803/87605)Resolving deltas:  51% (44679/87605)Resolving deltas:  52% (45555/87605)Resolving deltas:  53% (46431/87605)Resolving deltas:  54% (47307/87605)Resolving deltas:  55% (48183/87605)Resolving deltas:  55% (48185/87605)Resolving deltas:  56% (49059/87605)Resolving deltas:  57% (49935/87605)Resolving deltas:  58% (50811/87605)Resolving deltas:  59% (51687/87605)Resolving deltas:  60% (52563/87605)Resolving deltas:  61% (53440/87605)Resolving deltas:  62% (54316/87605)Resolving deltas:  63% (55192/87605)Resolving deltas:  64% (56068/87605)Resolving deltas:  65% (56944/87605)Resolving deltas:  66% (57820/87605)Resolving deltas:  67% (58696/87605)Resolving deltas:  68% (59572/87605)Resolving deltas:  69% (60448/87605)Resolving deltas:  70% (61324/87605)Resolving deltas:  71% (62200/87605)Resolving deltas:  72% (63076/87605)Resolving deltas:  73% (63952/87605)Resolving deltas:  74% (64828/87605)Resolving deltas:  75% (65704/87605)Resolving deltas:  76% (66580/87605)Resolving deltas:  77% (67456/87605)Resolving deltas:  78% (68332/87605)Resolving deltas:  79% (69208/87605)Resolving deltas:  80% (70084/87605)Resolving deltas:  81% (70961/87605)Resolving deltas:  82% (71837/87605)Resolving deltas:  83% (72713/87605)Resolving deltas:  83% (72957/87605)Resolving deltas:  84% (73589/87605)Resolving deltas:  85% (74465/87605)Resolving deltas:  86% (75341/87605)Resolving deltas:  87% (76217/87605)Resolving deltas:  88% (77093/87605)Resolving deltas:  89% (77969/87605)Resolving deltas:  90% (78845/87605)Resolving deltas:  91% (79721/87605)Resolving deltas:  92% (80597/87605)Resolving deltas:  93% (81473/87605)Resolving deltas:  94% (82349/87605)Resolving deltas:  95% (83225/87605)Resolving deltas:  96% (84101/87605)Resolving deltas:  97% (84977/87605)Resolving deltas:  98% (85853/87605)Resolving deltas:  99% (86729/87605)Resolving deltas: 100% (87605/87605)Resolving deltas: 100% (87605/87605), done.
+Updating files:   1% (138/11789)Updating files:   2% (236/11789)Updating files:   2% (353/11789)Updating files:   3% (354/11789)Updating files:   4% (472/11789)Updating files:   5% (590/11789)Updating files:   5% (626/11789)Updating files:   6% (708/11789)Updating files:   7% (826/11789)Updating files:   7% (922/11789)Updating files:   8% (944/11789)Updating files:   9% (1062/11789)Updating files:  10% (1179/11789)Updating files:  10% (1285/11789)Updating files:  11% (1297/11789)Updating files:  12% (1415/11789)Updating files:  13% (1533/11789)Updating files:  13% (1596/11789)Updating files:  14% (1651/11789)Updating files:  15% (1769/11789)Updating files:  15% (1792/11789)Updating files:  16% (1887/11789)Updating files:  17% (2005/11789)Updating files:  17% (2009/11789)Updating files:  18% (2123/11789)Updating files:  18% (2227/11789)Updating files:  19% (2240/11789)Updating files:  20% (2358/11789)Updating files:  20% (2455/11789)Updating files:  21% (2476/11789)Updating files:  22% (2594/11789)Updating files:  22% (2670/11789)Updating files:  23% (2712/11789)Updating files:  24% (2830/11789)Updating files:  24% (2862/11789)Updating files:  25% (2948/11789)Updating files:  26% (3066/11789)Updating files:  27% (3184/11789)Updating files:  28% (3301/11789)Updating files:  29% (3419/11789)Updating files:  29% (3534/11789)Updating files:  30% (3537/11789)Updating files:  31% (3655/11789)Updating files:  32% (3773/11789)Updating files:  33% (3891/11789)Updating files:  33% (3916/11789)Updating files:  34% (4009/11789)Updating files:  35% (4127/11789)Updating files:  36% (4245/11789)Updating files:  36% (4275/11789)Updating files:  37% (4362/11789)Updating files:  38% (4480/11789)Updating files:  39% (4598/11789)Updating files:  39% (4633/11789)Updating files:  40% (4716/11789)Updating files:  41% (4834/11789)Updating files:  42% (4952/11789)Updating files:  42% (4990/11789)Updating files:  43% (5070/11789)Updating files:  44% (5188/11789)Updating files:  45% (5306/11789)Updating files:  45% (5352/11789)Updating files:  46% (5423/11789)Updating files:  47% (5541/11789)Updating files:  48% (5659/11789)Updating files:  48% (5724/11789)Updating files:  49% (5777/11789)Updating files:  50% (5895/11789)Updating files:  51% (6013/11789)Updating files:  51% (6069/11789)Updating files:  52% (6131/11789)Updating files:  53% (6249/11789)Updating files:  54% (6367/11789)Updating files:  54% (6438/11789)Updating files:  55% (6484/11789)Updating files:  56% (6602/11789)Updating files:  57% (6720/11789)Updating files:  57% (6797/11789)Updating files:  58% (6838/11789)Updating files:  59% (6956/11789)Updating files:  60% (7074/11789)Updating files:  60% (7149/11789)Updating files:  61% (7192/11789)Updating files:  62% (7310/11789)Updating files:  63% (7428/11789)Updating files:  63% (7487/11789)Updating files:  64% (7545/11789)Updating files:  65% (7663/11789)Updating files:  66% (7781/11789)Updating files:  66% (7851/11789)Updating files:  67% (7899/11789)Updating files:  68% (8017/11789)Updating files:  69% (8135/11789)Updating files:  69% (8215/11789)Updating files:  70% (8253/11789)Updating files:  71% (8371/11789)Updating files:  72% (8489/11789)Updating files:  72% (8504/11789)Updating files:  73% (8606/11789)Updating files:  74% (8724/11789)Updating files:  74% (8743/11789)Updating files:  75% (8842/11789)Updating files:  75% (8914/11789)Updating files:  76% (8960/11789)Updating files:  76% (9063/11789)Updating files:  77% (9078/11789)Updating files:  78% (9196/11789)Updating files:  78% (9252/11789)Updating files:  79% (9314/11789)Updating files:  79% (9425/11789)Updating files:  80% (9432/11789)Updating files:  81% (9550/11789)Updating files:  81% (9596/11789)Updating files:  82% (9667/11789)Updating files:  82% (9729/11789)Updating files:  83% (9785/11789)Updating files:  83% (9809/11789)Updating files:  84% (9903/11789)Updating files:  84% (9996/11789)Updating files:  85% (10021/11789)Updating files:  86% (10139/11789)Updating files:  86% (10206/11789)Updating files:  87% (10257/11789)Updating files:  88% (10375/11789)Updating files:  88% (10439/11789)Updating files:  89% (10493/11789)Updating files:  90% (10611/11789)Updating files:  90% (10626/11789)Updating files:  91% (10728/11789)Updating files:  92% (10846/11789)Updating files:  92% (10856/11789)Updating files:  93% (10964/11789)Updating files:  94% (11082/11789)Updating files:  94% (11101/11789)Updating files:  95% (11200/11789)Updating files:  95% (11304/11789)Updating files:  96% (11318/11789)Updating files:  97% (11436/11789)Updating files:  97% (11529/11789)Updating files:  98% (11554/11789)Updating files:  99% (11672/11789)Updating files:  99% (11739/11789)Updating files: 100% (11789/11789)Updating files: 100% (11789/11789), done.
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ git status
+[?2004lOn branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mmylibgit/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ git add contribute[K[K[K[K[K[K[K[K[K[KCONTRIBUTING.MD[K[Kmd
+[?2004lfatal: pathspec 'CONTRIBUTING.md' did not match any files
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ ls
+[?2004l[0m[34;42mmylibgit[0m  [01;32mtextfile.txt[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test[00m$ cd mylibgit/
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ls
+[?2004l[0m[01;32mAUTHORS[0m         [01;32mCOPYING[0m    [01;32mSECURITY.md[0m   [34;42mci[0m     [34;42mdeps[0m  [34;42mexamples[0m  [01;32mgit.git-authors[0m  [01;32mpackage.json[0m  [34;42msrc[0m
+[01;32mCMakeLists.txt[0m  [01;32mREADME.md[0m  [01;32mapi.docurium[0m  [34;42mcmake[0m  [34;42mdocs[0m  [34;42mfuzzers[0m   [34;42minclude[0m          [34;42mscript[0m        [34;42mtests[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git add .
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ gits [K[K status -s 
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ cat .gitignore
+[?2004l/build/
+.DS_Store
+*~
+.*.swp
+/tags
+CMakeSettings.json
+.vs
+.idea
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git status 
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git diff
+[?2004l[?1h=[K[?1l>[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git commit
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git rm projects.md
+[?2004lfatal: pathspec 'projects.md' did not match any files
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git rm PROJECTS.md
+[?2004lfatal: pathspec 'PROJECTS.md' did not match any files
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ls
+[?2004l[0m[01;32mAUTHORS[0m         [01;32mCOPYING[0m    [01;32mSECURITY.md[0m   [34;42mci[0m     [34;42mdeps[0m  [34;42mexamples[0m  [01;32mgit.git-authors[0m  [01;32mpackage.json[0m  [34;42msrc[0m
+[01;32mCMakeLists.txt[0m  [01;32mREADME.md[0m  [01;32mapi.docurium[0m  [34;42mcmake[0m  [34;42mdocs[0m  [34;42mfuzzers[0m   [34;42minclude[0m          [34;42mscript[0m        [34;42mtests[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ mv README.md README
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git add README
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git log 
+[?2004l[?1h=[33mcommit f041a94e2c358e84adb5a0fe108288fcb3802970[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Merge: 9d41a3fd6 12b54ae00[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue May 16 12:41:41 2023 +0100[m
+[m
+    Merge branch 'worktree_prunable' (PR #5712)[m
+[m
+[33mcommit 12b54ae00948a7a8422af53a8e98a5aa4d51f1f7[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue May 16 12:40:16 2023 +0100[m
+[m
+    worktree: document that is_prunable sets error messages[m
+    [m
+    When a worktree is not prunable, an error message will be set with[m
+    information about why. Document that.[m
+[m
+[33mcommit 372143244dc82551eccb0503ef58d9850d530346[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue May 16 12:38:24 2023 +0100[m
+[m
+    worktree: update prunable to reflect refactorings[m
+    [m
+    PR #5712 predates several refactorings to move the utility code into a[m
+    more general purpose codebase. Update to reflect the refactorings.[m
+[m
+[33mcommit 05719c55ff6a8780d7d3b5ae5c55d81f981fe7b3[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 19:42:54 2020 -0500[m
+[m
+:[K[K[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[30;1H[K[K:[K[K:[K[K:[K[K[K:[K[K    Refactor git_worktree_is_prunable slightly to fix memory leak[m
+[m
+[33mcommit 86db1ad5dc9d878f463ac6c9d5ee412b62b74340[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:45:55 2020 -0500[m
+[m
+    Added check if gitdir exists in is_prunable()[m
+    [m
+    Fixes #5598[m
+[m
+[33mcommit 0fd80681f90ae23d5a74b469fefd3409d924ddae[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:32:50 2020 -0500[m
+[m
+    Added missing is_prunable test[m
+[m
+[33mcommit 9d41a3fd694d983ade53fb602a58f6df25ce0656[m[m
+Merge: 905e4d19c 8f695c806[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Sat May 13 17:11:56 2023 +0100[m
+[m
+    Merge pull request #6535 from libgit2/ethomson/timeouts[m
+[m
+[33mcommit 8f695c806bac2b044f102c55b802e44f2d30ca01[m[33m ([m[1;31morigin/ethomson/timeouts[m[33m)[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Apr 11 20:59:30 2023 +0100[m
+[m
+    clone: skip timeout tests on WinHTTP[m
+[m
+:[K[K-[K[7mCannot change the -p (--pattern) option  (press RETURN)[27m[30;1H[K[K:[K[K-[K[7mThere is no -2 option  (press RETURN)[27m[30;1H[K[K:[K[K[HM[m
+[HMDate:   Tue Nov 24 19:42:54 2020 -0500[m
+[HMAuthor: Reginald McLean <rbmclean00@gmail.com>[m
+[HM[33mcommit 05719c55ff6a8780d7d3b5ae5c55d81f981fe7b3[m[m
+[HM[m
+[HM    more general purpose codebase. Update to reflect the refactorings.[m
+[HM    PR #5712 predates several refactorings to move the utility code into a[m
+[HM    [m
+[HM    worktree: update prunable to reflect refactorings[m
+[HM[m
+[HMDate:   Tue May 16 12:38:24 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HM[33mcommit 372143244dc82551eccb0503ef58d9850d530346[m[m
+[HM[m
+[HM    information about why. Document that.[m
+[HM    When a worktree is not prunable, an error message will be set with[m
+[HM    [m
+[HM    worktree: document that is_prunable sets error messages[m
+[HM[m
+[HMDate:   Tue May 16 12:40:16 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HM[33mcommit 12b54ae00948a7a8422af53a8e98a5aa4d51f1f7[m[m
+[HM[m
+[HM    Merge branch 'worktree_prunable' (PR #5712)[m
+[HM[m
+[HMDate:   Tue May 16 12:41:41 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HMMerge: 9d41a3fd6 12b54ae00[m
+[HM[33mcommit f041a94e2c358e84adb5a0fe108288fcb3802970[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+[30;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[30;1H[K[K:[K[K:[K[K:[K[K[K:[K[K    Refactor git_worktree_is_prunable slightly to fix memory leak[m
+[m
+[33mcommit 86db1ad5dc9d878f463ac6c9d5ee412b62b74340[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:45:55 2020 -0500[m
+[m
+    Added check if gitdir exists in is_prunable()[m
+    [m
+    Fixes #5598[m
+[m
+[33mcommit 0fd80681f90ae23d5a74b469fefd3409d924ddae[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:32:50 2020 -0500[m
+[m
+    Added missing is_prunable test[m
+[m
+[33mcommit 9d41a3fd694d983ade53fb602a58f6df25ce0656[m[m
+Merge: 905e4d19c 8f695c806[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Sat May 13 17:11:56 2023 +0100[m
+[m
+    Merge pull request #6535 from libgit2/ethomson/timeouts[m
+[m
+[33mcommit 8f695c806bac2b044f102c55b802e44f2d30ca01[m[33m ([m[1;31morigin/ethomson/timeouts[m[33m)[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Apr 11 20:59:30 2023 +0100[m
+[m
+    clone: skip timeout tests on WinHTTP[m
+[m
+:[K[K-[K[7mCannot change the -p (--pattern) option  (press RETURN)[27m[30;1H[K[K:[K[K-[K[7mThere is no -2 option  (press RETURN)[27m[30;1H[K[Kgoto mark: [K:[K[K[HM[m
+[HMDate:   Tue Nov 24 19:42:54 2020 -0500[m
+[HMAuthor: Reginald McLean <rbmclean00@gmail.com>[m
+[HM[33mcommit 05719c55ff6a8780d7d3b5ae5c55d81f981fe7b3[m[m
+[HM[m
+[HM    more general purpose codebase. Update to reflect the refactorings.[m
+[HM    PR #5712 predates several refactorings to move the utility code into a[m
+[HM    [m
+[HM    worktree: update prunable to reflect refactorings[m
+[HM[m
+[HMDate:   Tue May 16 12:38:24 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HM[33mcommit 372143244dc82551eccb0503ef58d9850d530346[m[m
+[HM[m
+[HM    information about why. Document that.[m
+[HM    When a worktree is not prunable, an error message will be set with[m
+[HM    [m
+[HM    worktree: document that is_prunable sets error messages[m
+[HM[m
+[HMDate:   Tue May 16 12:40:16 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HM[33mcommit 12b54ae00948a7a8422af53a8e98a5aa4d51f1f7[m[m
+[HM[m
+[HM    Merge branch 'worktree_prunable' (PR #5712)[m
+[HM[m
+[HMDate:   Tue May 16 12:41:41 2023 +0100[m
+[HMAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+[HMMerge: 9d41a3fd6 12b54ae00[m
+[HM[33mcommit f041a94e2c358e84adb5a0fe108288fcb3802970[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+[30;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[30;1H[K[K:[K[K:[K[K:[K[K[K:[K[K    Refactor git_worktree_is_prunable slightly to fix memory leak[m
+[m
+[33mcommit 86db1ad5dc9d878f463ac6c9d5ee412b62b74340[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:45:55 2020 -0500[m
+[m
+    Added check if gitdir exists in is_prunable()[m
+    [m
+    Fixes #5598[m
+[m
+[33mcommit 0fd80681f90ae23d5a74b469fefd3409d924ddae[m[m
+Author: Reginald McLean <rbmclean00@gmail.com>[m
+Date:   Tue Nov 24 18:32:50 2020 -0500[m
+[m
+    Added missing is_prunable test[m
+[m
+[33mcommit 9d41a3fd694d983ade53fb602a58f6df25ce0656[m[m
+Merge: 905e4d19c 8f695c806[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Sat May 13 17:11:56 2023 +0100[m
+[m
+    Merge pull request #6535 from libgit2/ethomson/timeouts[m
+[m
+[33mcommit 8f695c806bac2b044f102c55b802e44f2d30ca01[m[33m ([m[1;31morigin/ethomson/timeouts[m[33m)[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Apr 11 20:59:30 2023 +0100[m
+[m
+    clone: skip timeout tests on WinHTTP[m
+[m
+:[K[K-[K[7mCannot change the -p (--pattern) option  (press RETURN)[27m[30;1H[K[K:[K[K-[K[7mThere is no -2 option  (press RETURN)[27m[30;1H[K[K:[K[K[33mcommit 14c820b191a7083bf9a54792e09afcd83e0f0206[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Tue Apr 11 20:55:22 2023 +0100[m
+:[K[K[m
+:[K[K    win32: use WSAGetLastError to determine blocking[m
+:[K[K[m
+:[K[K[33mcommit 03eebab8a9fc353e96b2f6932d28defd5d868bca[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:32 2023 +0100[m
+:[K[K[m
+:[K[K    win32: getsockopt takes a `char *` instead of a `void *`[m
+:[K[K    [m
+:[K[K    Monsters.[m
+:[K[K[m
+:[K[K[33mcommit 02ab53ce051df9a6b70b8f075956ed3a41f9979e[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:31 2023 +0100[m
+:[K[K[m
+:[K[K    cmake: use `check_symbol_exists` for rand functions[m
+:[K[K    [m
+:[K[K    `check_symbol_exists` is superior to `check_function_exists`; use it[m
+:[K[K [KESCESC[H[2J[H    Merge pull request #6535 from libgit2/ethomson/timeouts[m
+[m
+[33mcommit 8f695c806bac2b044f102c55b802e44f2d30ca01[m[33m ([m[1;31morigin/ethomson/timeouts[m[33m)[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Apr 11 20:59:30 2023 +0100[m
+[m
+    clone: skip timeout tests on WinHTTP[m
+[m
+[33mcommit 14c820b191a7083bf9a54792e09afcd83e0f0206[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Apr 11 20:55:22 2023 +0100[m
+[m
+    win32: use WSAGetLastError to determine blocking[m
+[m
+[33mcommit 03eebab8a9fc353e96b2f6932d28defd5d868bca[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Fri May 12 20:48:32 2023 +0100[m
+[m
+    win32: getsockopt takes a `char *` instead of a `void *`[m
+    [m
+    Monsters.[m
+[m
+[33mcommit 02ab53ce051df9a6b70b8f075956ed3a41f9979e[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Fri May 12 20:48:31 2023 +0100[m
+[m
+    cmake: use `check_symbol_exists` for rand functions[m
+    [m
+    `check_symbol_exists` is superior to `check_function_exists`; use it[m
+:[K[K [KESCESC[K^J^J[K:[K[K    consistently in our cmake configuration[m
+:[K[K[m
+:[K[K[33mcommit 9908c076ab3fafa18f00c866840819d52bc6b00f[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:31 2023 +0100[m
+:[K[K[m
+:[K[K    posix: use WSAPoll on win32[m
+:[K[K[m
+:[K[K[33mcommit 94f98400bf950aa9835ff9b04c724f2aa3ebd0fc[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:31 2023 +0100[m
+:[K[K[m
+:[K[K    posix: introduce p_poll emulation with select[m
+:[K[K    [m
+:[K[K    Not all systems have poll(2); emulate it with select(2).[m
+:[K[K[m
+:[K[K[33mcommit fad90428970e332153027773b517a1606c0efa1f[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:30 2023 +0100[m
+:[K[K[m
+:[K[K    streams: sockets are non-blocking and can timeout[m
+:[K[K    [m
+:[K[K    Make socket I/O non-blocking and add optional timeouts.[m
+:[K[K    [m
+:[K[K    Users may now set `GIT_OPT_SET_SERVER_CONNECT_TIMEOUT` to set a shorter[m
+:[K[K    connection timeout. (The connect timeout cannot be longer than the[m
+:[K[K    operating system default.) Users may also now configure the socket read[m
+:[K[K    and write timeouts with `GIT_OPT_SET_SERVER_TIMEOUT`.[m
+:[K[K    [m
+:[K[K    By default, connects still timeout based on the operating system[m
+:[K[K    defaults (typically 75 seconds) and socket read and writes block.[m
+:[K[K    [m
+:[K[K    Add a test against our custom testing git server that ensures that we[m
+:[K[K    can timeout reads against a slow server.[m
+:[K[K[m
+:[K[K[33mcommit 933b04c219b49d0f9cd779d024bfa39d806839ac[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:30 2023 +0100[m
+:[K[K[m
+:[K[K    ci: update to poxygit v0.6.0[m
+:[K[K    [m
+:[K[K    v0.6.0 of poxygit add support for throttling connections to test[m
+:[K[K    timeouts and low-bandwidth situations.[m
+:[K[K[m
+:[K[K[33mcommit 11c89c386c8862f834097cdc5d9ed79634cf00f3[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:30 2023 +0100[m
+:[K[K[m
+:[K[K    net: move `gitno` buffer to `staticstr`[m
+:[K[K    [m
+:[K[K    The `gitno` buffer interface is another layer on top of socket reads.[m
+:[K[K    Abstract it a bit into a "static string" that has `git_str` like[m
+:[K[K    semantics but without heap allocation which moves the actual reading[m
+:[K[K    logic into the socket / stream code, and allows for easier future usage[m
+:[K[K    of a static / stack-allocated `git_str`-like interface.[m
+:[K[K[m
+:[K[K[33mcommit 6e4bbf222d8c4babaff90aef40615546c8bc9cde[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:30 2023 +0100[m
+:[K[K[m
+:[K[K    net: move rfc2818 hostname / wildcard matching to util[m
+:[K[K[m
+:[K[K[33mcommit dbe343b6e3e957b5cffbd04832c6e7364b496ae7[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:28 2023 +0100[m
+:[K[K[m
+:[K[K    stransport: store error information[m
+:[K[K    [m
+:[K[K    We lose some error information from the read / write callbacks to[m
+:[K[K    stransport. Store our own error value in the object so that we can[m
+:[K[K    ensure that we rely upon it.[m
+:[K[K[m
+:[K[K[33mcommit 6c0d5b11c05254d91a2d0025d556251404f8f05f[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Fri May 12 20:48:19 2023 +0100[m
+:[K[K[m
+:[K[K    util: make monotonic time fn return ms[m
+:[K[K    [m
+:[K[K    `git__timer` is now `git_time_monotonic`, and returns milliseconds[m
+:[K[K    since an arbitrary epoch.[m
+:[K[K    [m
+:[K[K    Using a floating point to store the number of seconds elapsed was[m
+:[K[K    clever, as it better supports the wide range of precision from the[m
+:[K[K    different monotonic clocks of different systems. But we're a version[m
+:[K[K    control system, not a real-time clock.[m
+:[K[K    [m
+:[K[K    Milliseconds is a good enough precision for our work _and_ it's the[m
+:[K[K    units that system calls like `poll` take and that our users interact[m
+:[K[K    with.[m
+:[K[K    [m
+:[K[K    Make `git_time_monotonic` return the monotonically increasing number[m
+:[K[K    of milliseconds "ticked" since some arbitrary epoch.[m
+:[K[K[m
+:[K[K[33mcommit 905e4d19c2c401cef3964c2e28bf64b0dad77331[m[m
+:[K[KMerge: 3a4e08a78 ebf2991f0[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Sat May 13 14:33:23 2023 +0100[m
+:[K[K[m
+:[K[K    Merge pull request #5722 from libgit2/ethomson/tlsdata_fail[m
+:[K[K    [m
+:[K[K    Thread-local storage: handle failure cases[m
+:[K[K[m
+:[K[K[33mcommit ebf2991f06d8831ed23524a068210b8103b5f604[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Tue Dec 8 19:46:25 2020 +0000[m
+:[K[K[m
+:[K[K    threadstate: don't use an unnecessary macro[m
+:[K[K    [m
+:[K[K    Now that we've reduced the usage of GIT_THREADSTATE, remove it entirely[m
+:[K[K    in favor of git_threadstate_get().[m
+:[K[K[m
+:[K[K[33mcommit 4f76ef568d74c63031eb42fc10bf08b5641e5f0b[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Tue Dec 8 19:28:44 2020 +0000[m
+:[K[K[m
+:[K[K    oid: don't assume thread local state was initialized[m
+:[K[K    [m
+:[K[K    git_oid_tostr_s could fail if thread-local state initialization fails.[m
+:[K[K    In that case, it will now return `NULL`.  Callers should check for[m
+:[K[K    `NULL` and propagate the failure.[m
+:[K[K[m
+:[K[K[33mcommit ce488be46e4cd2aeeb69c39a062fae1ba9a302f6[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Tue Dec 8 19:28:01 2020 +0000[m
+:[K[K[m
+:[K[K    errors: don't rely on tls data working[m
+:[K[K    [m
+:[K[K    Thread-local storage data may fail to initialize; in this case, do not[m
+:[K[K    try to set the error message into it.  When the thread state has not[m
+:[K[K    been initialized, return a hardcoded message to that affect.[m
+:[K[K[m
+:[K[K[33mcommit 4be63a68667d3c75a3da36b3bc8045459a360906[m[m
+:[K[KAuthor: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[KDate:   Tue Dec 8 18:01:03 2020 +0000[m
+:[K[K[m
+:[K[K    errors: drop unneccessary g_git prefix[m
+:[K[K[m
+:[K[H[2J[H    Now that we've reduced the usage of GIT_THREADSTATE, remove it entirely[m
+    in favor of git_threadstate_get().[m
+[m
+[33mcommit 4f76ef568d74c63031eb42fc10bf08b5641e5f0b[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Dec 8 19:28:44 2020 +0000[m
+[m
+    oid: don't assume thread local state was initialized[m
+    [m
+    git_oid_tostr_s could fail if thread-local state initialization fails.[m
+    In that case, it will now return `NULL`.  Callers should check for[m
+    `NULL` and propagate the failure.[m
+[m
+[33mcommit ce488be46e4cd2aeeb69c39a062fae1ba9a302f6[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Dec 8 19:28:01 2020 +0000[m
+[m
+    errors: don't rely on tls data working[m
+    [m
+    Thread-local storage data may fail to initialize; in this case, do not[m
+    try to set the error message into it.  When the thread state has not[m
+    been initialized, return a hardcoded message to that affect.[m
+[m
+[33mcommit 4be63a68667d3c75a3da36b3bc8045459a360906[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Tue Dec 8 18:01:03 2020 +0000[m
+[m
+    errors: drop unneccessary g_git prefix[m
+[m
+:[K[K[33mcommit 3a4e08a78b41528b82aaa9c087a55242cefecf2f[m[m
+Merge: c87a3f8f6 7eb63188e[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Sat May 13 13:45:19 2023 +0100[m
+[m
+    Merge pull request #6488 from libgit2/ethomson/workflow[m
+    [m
+    actions: simplify execution with composite action[m
+[m
+[33mcommit c87a3f8f6c698e62bc95f801755db8c4281bebe7[m[m
+Merge: 213d35ea6 027630ddd[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Sat May 13 13:42:24 2023 +0100[m
+[m
+    Merge pull request #6561 from libgit2/ethomson/xdiff[m
+    [m
+    Update xdiff to git 2.40.1's version[m
+[m
+[33mcommit 213d35ea6d69598693b7f4b5b737aa98c91ba98e[m[m
+Merge: 2bbcdee6b 333573857[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+Date:   Fri May 12 22:24:49 2023 +0100[m
+[m
+    Merge pull request #6558 from DimitryAndric/fix-qsort-variants-2[m
+    [m
+    Work around -Werror problems when detecting qsort variants[m
+[m
+[33mcommit 333573857960fa7260f01f38a2003bafa2313a87[m[m
+Author: Edward Thomson <ethomson@edwardthomson.com>[m
+:[K[K:[K11[K[?1l>
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ w[Kgit wsta[K[K[K[K[Ks[K status
+[?2004lOn branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   README[m
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    README.md[m
+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git add *
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git remote -v
+[?2004lorigin	https://github.com/libgit2/libgit2 (fetch)
+origin	https://github.com/libgit2/libgit2 (push)
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git push origin master
+[?2004lerror: src refspec master does not match any
+[31merror: failed to push some refs to 'https://github.com/libgit2/libgit2'
+[m[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git remote show origin
+[?2004l* remote origin
+  Fetch URL: https://github.com/libgit2/libgit2
+  Push  URL: https://github.com/libgit2/libgit2
+  HEAD branch: main
+  Remote branches:
+    bindings/libgit2sharp/022_1              tracked
+    brianmario/attr-from-tree                tracked
+    brianmario/revwalk-filter                tracked
+    brianmario/trailer-info                  tracked
+    brianmario/trailer-list                  tracked
+    ci                                       tracked
+    cmn/atexit-skeleton                      tracked
+    cmn/cancellation                         tracked
+    cmn/commit-on                            tracked
+    cmn/ctest-jobs                           tracked
+    cmn/delta-base-eviction                  tracked
+    cmn/diff-binary-patch                    tracked
+    cmn/dynamic-libssh2                      tracked
+    cmn/example-pull                         tracked
+    cmn/forbid-mutiurl                       tracked
+    cmn/init-ssh                             tracked
+    cmn/io-stream-backends                   tracked
+    cmn/leaks                                tracked
+    cmn/parallel-clar                        tracked
+    cmn/pcre2                                tracked
+    cmn/read-only-size                       tracked
+    cmn/remote-options                       tracked
+    cmn/repo-v1                              tracked
+    cmn/reset-dont-free-url                  tracked
+    cmn/server                               tracked
+    cmn/sortedcache-close                    tracked
+    cmn/tmp                                  tracked
+    cmn/tree-parser-sort-input               tracked
+    cmn/warnings                             tracked
+    csware/system_proxy                      tracked
+    development                              tracked
+    diff-fails-with-cpp-file                 tracked
+    enterprise/backport-2.6-4136-4178        tracked
+    enterprise/backport-2.7-4136-4178        tracked
+    enterprise/backport-2.8-4136-4178        tracked
+    enterprise/backport-2.9-4136-4178        tracked
+    ethomson/027                             tracked
+    ethomson/checkout_conflict_respect_index tracked
+    ethomson/checkout_safety                 tracked
+    ethomson/ci                              tracked
+    ethomson/ci_test_results                 tracked
+    ethomson/cli                             tracked
+    ethomson/cli_cmd_clone                   tracked
+    ethomson/clone_namespaced                tracked
+    ethomson/cmake                           tracked
+    ethomson/cmake2                          tracked
+    ethomson/cmake4                          tracked
+    ethomson/cmake5                          tracked
+    ethomson/cmake6                          tracked
+    ethomson/codespaces                      tracked
+    ethomson/diff_fail                       tracked
+    ethomson/diff_regexp_ignore              tracked
+    ethomson/docs                            tracked
+    ethomson/filter_driver_git_buf           tracked
+    ethomson/find_executable                 tracked
+    ethomson/fix-stale-filesize-crash        tracked
+    ethomson/follow_redirects                tracked
+    ethomson/future                          tracked
+    ethomson/init-bak                        tracked
+    ethomson/is_and_from                     tracked
+    ethomson/keepalive                       tracked
+    ethomson/libssh2                         tracked
+    ethomson/links                           tracked
+    ethomson/middleware                      tracked
+    ethomson/nightlies                       tracked
+    ethomson/no_qemu                         tracked
+    ethomson/nonblocking                     tracked
+    ethomson/ntlm                            tracked
+    ethomson/objectformat                    tracked
+    ethomson/off_t_bak                       tracked
+    ethomson/oid_cleanups                    tracked
+    ethomson/oidmadness                      tracked
+    ethomson/path_validation                 tracked
+    ethomson/prng2                           tracked
+    ethomson/racy-diff                       tracked
+    ethomson/reference_cmp                   tracked
+    ethomson/schannel                        tracked
+    ethomson/sha256_experimental-old         tracked
+    ethomson/sha256_fix                      tracked
+    ethomson/sha256_index                    tracked
+    ethomson/sha256_loose                    tracked
+    ethomson/sha256_pack                     tracked
+    ethomson/sha256_raw                      tracked
+    ethomson/smartrefactor                   tracked
+    ethomson/ssh_exec                        tracked
+    ethomson/ssh_exec_2                      tracked
+    ethomson/ssl_proxy                       tracked
+    ethomson/ssl_refactor                    tracked
+    ethomson/stream-truncated-writes         tracked
+    ethomson/sysdir_test                     tracked
+    ethomson/test_https                      tracked
+    ethomson/test_urls_with_spaces           tracked
+    ethomson/timeouts                        tracked
+    ethomson/update_tips_spec                tracked
+    ethomson/util                            tracked
+    ethomson/util2                           tracked
+    ethomson/util3                           tracked
+    ethomson/util4                           tracked
+    ethomson/util5                           tracked
+    ethomson/util_as_a_directory             tracked
+    ethomson/warnings                        tracked
+    ethomson/winauth                         tracked
+    ethomson/windows_ssh                     tracked
+    ethomson/xdiff                           tracked
+    gh-pages                                 tracked
+    jss/fix-ignore-pop                       tracked
+    main                                     tracked
+    maint/v0.21                              tracked
+    maint/v0.22                              tracked
+    maint/v0.23                              tracked
+    maint/v0.24                              tracked
+    maint/v0.25                              tracked
+    maint/v0.26                              tracked
+    maint/v0.27                              tracked
+    maint/v0.28                              tracked
+    maint/v0.99                              tracked
+    maint/v1.0                               tracked
+    maint/v1.1                               tracked
+    maint/v1.2                               tracked
+    maint/v1.3                               tracked
+    maint/v1.4                               tracked
+    maint/v1.5                               tracked
+    maint/v1.6                               tracked
+    pks-cmake-targets                        tracked
+    pks/test-allocator                       tracked
+    precompose-test                          tracked
+    rb/commit-modified-file                  tracked
+    rb/object-parse-flexibility              tracked
+    rb/test-builtin-drivers                  tracked
+    rb/warnings-for-commit-headers           tracked
+    users/ethomson/cmake2                    tracked
+    vmg/read-types                           tracked
+    vmg/repo-format-1                        tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (up to date)
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git remote origin
+[?2004lerror: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git tag
+[?2004l[?1h=v0.1.0[m
+v0.10.0[m
+v0.11.0[m
+v0.12.0[m
+v0.13.0[m
+v0.14.0[m
+v0.15.0[m
+v0.16.0[m
+v0.17.0[m
+v0.18.0[m
+v0.19.0[m
+v0.2.0[m
+v0.20.0[m
+v0.21.0[m
+v0.21.0-rc1[m
+v0.21.0-rc2[m
+v0.21.1[m
+v0.21.2[m
+v0.21.3[m
+v0.21.4[m
+v0.21.5[m
+v0.22.0[m
+v0.22.0-rc1[m
+v0.22.0-rc2[m
+v0.22.1[m
+v0.22.2[m
+v0.22.3[m
+v0.23.0[m
+v0.23.0-rc1[m
+:[K[K[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[30;1H[K[K:[K[Kv0.23.0-rc2[m
+:[K[Kv0.23.1[m
+v0.23.2[m
+v0.23.3[m
+v0.23.4[m
+v0.24.0[m
+v0.24.0-rc1[m
+v0.24.1[m
+v0.24.2[m
+v0.24.3[m
+v0.24.4[m
+v0.24.5[m
+v0.24.6[m
+v0.25.0[m
+v0.25.0-rc1[m
+v0.25.0-rc2[m
+v0.25.1[m
+v0.26.0[m
+v0.26.0-rc1[m
+v0.26.0-rc2[m
+v0.26.1[m
+v0.26.2[m
+v0.26.3[m
+v0.26.4[m
+v0.26.5[m
+v0.26.6[m
+v0.26.7[m
+v0.26.8[m
+v0.27.0[m
+v0.27.0-rc1[m
+:[K[K:[K11[K22[K33[Kv0.27.0-rc2[m
+v0.27.0-rc3[m
+v0.27.1[m
+v0.27.10[m
+v0.27.2[m
+v0.27.3[m
+v0.27.4[m
+v0.27.5[m
+v0.27.6[m
+v0.27.7[m
+v0.27.8[m
+v0.27.9[m
+v0.28.0[m
+v0.28.0-rc1[m
+v0.28.1[m
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+[7m(END)[27m[K[K[K[7m(END)[27m[K[KExamine: [KNN[KDD[K[K[7mND: No such file or directory  (press RETURN)[27m[30;1H[K[KExamine: [KEE[KNN[KDD[K[K[7mEND: No such file or directory  (press RETURN)[27m[30;1H[K...skipping...
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[HMv0.28.1[m
+[30;1H[K:[K[Kv1.6.4[m
+[7m(END)[27m[K[K[HMv0.28.1[m
+[30;1H[K:[K[K[HMv0.28.0-rc1[m
+[30;1H[K:[K[K[HMv0.28.0[m
+[30;1H[K:[K[K[HMv0.27.9[m
+[30;1H[K:[K[K[HMv0.27.8[m
+[30;1H[K:[K[K[HMv0.27.7[m
+[30;1H[K:[K[K[HMv0.27.6[m
+[30;1H[K:[K[K[HMv0.27.5[m
+[30;1H[K:[K[K[HMv0.27.4[m
+[30;1H[K:[K[K[HMv0.27.3[m
+[30;1H[K:[K[K[HMv0.27.2[m
+[30;1H[K:[K[K[HMv0.27.10[m
+[30;1H[K:[K[K[HMv0.27.1[m
+[30;1H[K:[K[K[HMv0.27.0-rc3[m
+[30;1H[K:[K[K[HMv0.27.0-rc2[m
+[30;1H[K:[K[K[HMv0.27.0-rc1[m
+[30;1H[K:[K[K[HMv0.27.0[m
+[30;1H[K:[K[K[HMv0.26.8[m
+[30;1H[K:[K[K[HMv0.26.7[m
+[30;1H[K:[K[K[HMv0.26.6[m
+[30;1H[K:[K[K[HMv0.26.5[m
+[30;1H[K:[K[K[HMv0.26.4[m
+[30;1H[K:[K[K[HMv0.26.3[m
+[30;1H[K:[K[K[HMv0.26.2[m
+[30;1H[K:[K[K[HMv0.26.1[m
+[30;1H[K:[K[K[HMv0.26.0-rc2[m
+[30;1H[K:[K[K[HMv0.26.0-rc1[m
+[30;1H[K:[K[K[HMv0.26.0[m
+[30;1H[K:[K[K[HMv0.25.1[m
+[30;1H[K:[K[K[HMv0.25.0-rc2[m
+[30;1H[K:[K[K[HMv0.25.0-rc1[m
+[30;1H[K:[K[K[HMv0.25.0[m
+[30;1H[K:[K[K[HMv0.24.6[m
+[30;1H[K:[K[K[HMv0.24.5[m
+[30;1H[K:[K[K[HMv0.24.4[m
+[30;1H[K:[K[K[HMv0.24.3[m
+[30;1H[K:[K[K[HMv0.24.2[m
+[30;1H[K:[K[K[HMv0.24.1[m
+[30;1H[K:[K[K[HMv0.24.0-rc1[m
+[30;1H[K:[K[K[HMv0.24.0[m
+[30;1H[K:[K[K[HMv0.23.4[m
+[30;1H[K:[K[K[HMv0.23.3[m
+[30;1H[K:[K[K[HMv0.23.2[m
+[30;1H[K:[K[K[HMv0.23.1[m
+[30;1H[K:[K[K[HMv0.23.0-rc2[m
+[30;1H[K:[K[K[HMv0.23.0-rc1[m
+[30;1H[K:[K[K[HMv0.23.0[m
+[30;1H[K:[K[K[HMv0.22.3[m
+[30;1H[K:[K[K[HMv0.22.2[m
+[30;1H[K:[K[K[HMv0.22.1[m
+[30;1H[K:[K[K[HMv0.22.0-rc2[m
+[30;1H[K:[K[K[HMv0.22.0-rc1[m
+[30;1H[K:[K[K[HMv0.22.0[m
+[30;1H[K:[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K/[K[K[7mNo previous regular expression  (press RETURN)[27m[30;1H[K[K:[K[Kv0.26.2[m
+:[K[Kv0.26.3[m
+:[K[Kv0.26.4[m
+:[K[Kv0.26.5[m
+:[K[Kv0.26.6[m
+:[K[K:[K[Kv0.26.7[m
+v0.26.8[m
+v0.27.0[m
+v0.27.0-rc1[m
+v0.27.0-rc2[m
+v0.27.0-rc3[m
+v0.27.1[m
+v0.27.10[m
+v0.27.2[m
+v0.27.3[m
+v0.27.4[m
+v0.27.5[m
+v0.27.6[m
+v0.27.7[m
+v0.27.8[m
+:[K[K:[K[K-[Klog file: [K22[K33[K11[K''[K/bin/bash: -c: line 1: unexpected EOF while looking for matching `''
+/bin/bash: -c: line 2: syntax error: unexpected end of file
+[K:[K[K:[K11[K22[K33[Kv0.27.9[m
+v0.28.0[m
+v0.28.0-rc1[m
+v0.28.1[m
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+[7m(END)[27m[K[KBrackets: [K(([K))[K[K[7mNo bracket in top line  (press RETURN)[27m[30;1H[K[KExamine: [KNN[KDD[K[K[KEE[KNN[KDD[K[K[7mEND: No such file or directory  (press RETURN)[27m[30;1H[K[K:[K22[K...skipping...
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+:[K[K[7mCannot edit standard input  (press RETURN)[27m[30;1H[K[K:[K11[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[H[2J[Hv0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+[7m(END)[27m[K[H[2J[Hv0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K:[K11[K [KESCESC[K^J^J[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[HMv0.28.1[m
+[30;1H[K:[K[Kv1.6.4[m
+[7m(END)[27m[K[K:[K11[K33[K22[K44[K88[K11[K22[K...skipping...
+v0.1.0[m
+v0.10.0[m
+v0.11.0[m
+v0.12.0[m
+v0.13.0[m
+v0.14.0[m
+v0.15.0[m
+v0.16.0[m
+v0.17.0[m
+v0.18.0[m
+v0.19.0[m
+v0.2.0[m
+v0.20.0[m
+v0.21.0[m
+v0.21.0-rc1[m
+v0.21.0-rc2[m
+v0.21.1[m
+v0.21.2[m
+v0.21.3[m
+v0.21.4[m
+v0.21.5[m
+v0.22.0[m
+v0.22.0-rc1[m
+v0.22.0-rc2[m
+v0.22.1[m
+v0.22.2[m
+v0.22.3[m
+v0.23.0[m
+v0.23.0-rc1[m
+:[K[Kv0.23.0-rc2[m
+:[K[K:[K44[Kv0.23.1[m
+v0.23.2[m
+v0.23.3[m
+v0.23.4[m
+:[K[Kv0.24.0[m
+v0.24.0-rc1[m
+v0.24.1[m
+v0.24.2[m
+v0.24.3[m
+v0.24.4[m
+v0.24.5[m
+v0.24.6[m
+v0.25.0[m
+v0.25.0-rc1[m
+v0.25.0-rc2[m
+v0.25.1[m
+v0.26.0[m
+v0.26.0-rc1[m
+v0.26.0-rc2[m
+v0.26.1[m
+v0.26.2[m
+v0.26.3[m
+v0.26.4[m
+v0.26.5[m
+v0.26.6[m
+v0.26.7[m
+v0.26.8[m
+v0.27.0[m
+v0.27.0-rc1[m
+v0.27.0-rc2[m
+v0.27.0-rc3[m
+v0.27.1[m
+v0.27.10[m
+:[K[K:[K[K-[Klog file: [Kff[K[K:[K[K:[K[K-[Klog file: [Kii[Kdd[Kbb[Kaa[Knn[Kss[Kll[Kjj[Kff[Knn[Kqq[Kww[Kll[Kjj[Knn[Kee[Kll[Kjj[Kqq[Kww[Kff[Kss[Kaa[K[K[7mLog file is already in use  (press RETURN)[27m[30;1H[K[K:[K22[K11[K33[K22[K11[K33[K11[K22[Kgoto mark: [K[K[7mInvalid mark letter 1  (press RETURN)[27m[30;1H[K[K:[K22[K44[Kv0.27.2[m
+v0.27.3[m
+v0.27.4[m
+v0.27.5[m
+v0.27.6[m
+v0.27.7[m
+v0.27.8[m
+v0.27.9[m
+v0.28.0[m
+v0.28.0-rc1[m
+v0.28.1[m
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+:[K[K:[K22[K11[K44[K22[K11[Kv1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+[7m(END)[27m[K[KExamine: [KNN[KDD[K[K[7mND: No such file or directory  (press RETURN)[27m[30;1H[K...skipping...
+v0.28.2[m
+v0.28.3[m
+v0.28.4[m
+v0.28.5[m
+v0.3.0[m
+v0.8.0[m
+v0.99.0[m
+v1.0.0[m
+v1.0.1[m
+v1.1.0[m
+v1.1.1[m
+v1.2.0[m
+v1.3.0[m
+v1.3.1[m
+v1.3.2[m
+v1.4.0[m
+v1.4.1[m
+v1.4.2[m
+v1.4.3[m
+v1.4.4[m
+v1.4.5[m
+v1.4.6[m
+v1.5.0[m
+v1.5.1[m
+v1.5.2[m
+v1.6.1[m
+v1.6.2[m
+v1.6.3[m
+v1.6.4[m
+:[K[K[?1l>
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git las t
+[?2004lgit: 'las' is not a git command. See 'git --help'.
+
+The most similar command is
+	lfs
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git last 
+[?2004lgit: 'last' is not a git command. See 'git --help'.
+
+The most similar commands are
+	blame
+	lfs
+	reset
+	stash
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git branch test_k
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git checkout b[Ktr[Kest_k
+[?2004lA	README
+D	README.md
+Switched to branch 'test_k'
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ vim test.rb
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;30r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[30;1H"test.rb" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?25h[?25l[30;93H1[1;1H[?25h[?25l[30;94Hq[1;1H[?25h[?25l[30;95Hu[1;1H[30;1H[1mrecording @u[m[30;13H[K[30;103H0,0-1[9CAll[1;1H[?25h[?25l[30;93Ho[1;1H[30;93H [2;1H[30;1H[1m--c INSERT --[m [1mrecording @u[m[30;103H[K[30;103H2,1[11CAll[2;1H[K[2;1H[?25h[?25lndf[30;105H4[2;4H[?25h[?25la[30;105H5[2;5H[?25h[?25ls[30;105H6[2;6H[?25h[?25ll[30;105H7[2;7H[?25h[?25lf[30;105H8[2;8H[?25h[?25lk[30;105H9[2;9H[?25h[?25la[30;105H10[2;10H[?25h[?25ls[30;106H1[2;11H[?25h[?25ll[30;106H2[2;12H[?25h[?25lf[30;106H3[2;13H[?25h[?25lk[30;106H4[2;14H[?25h[?25ln[30;106H5[2;15H[?25h[?25la[30;106H6[2;16H[?25h[?25ls[30;106H7[2;17H[?25h[?25ll[30;106H8[2;18H[?25h[?25lk[30;106H9[2;19H[?25h[?25lf[30;105H20[2;20H[?25h[?25ln[30;106H1[2;21H[?25h[?25l[3;1H[K[30;103H3,1 [3;1H[?25h[30;1H[1mrecording @ur[m[30;13H[K[3;1H[?25l[30;93H^[[3;1H[30;93H  [3;1H[30;103H3,0-1[9CAll[3;1H[?25h[?25l[30;93Hq[3;1H[30;1H[K[3;1H[30;103H3,0-1[9CAll[3;1H[?25h[?25l[30;93H^M[3;1H[30;93H  [3;1H[?25h[?25l[30;93H^[[3;1H[30;93H  [3;1H[30;93H^[[3;1H[30;93H  [3;1H[?25h[?25l[30;93H^[[3;1H[30;93H  [3;1H[30;93H^[[3;1H[30;93H  [3;1H[?25h[?25l[30;93Hq[3;1H[?25h[?25l[30;94H~[3;1H[30;93H  [3;1H[?25h[?25l[30;93H^M[3;1H[30;93H  [3;1H[?25h[?25l[30;93H^[[3;1H[30;93H  [3;1H[30;93H^[[3;1H[30;93H  [3;1H[?25h[?25l[30;93H^M[3;1H[30;93H  [3;1H[?25h[?25l[30;93H~@k[3;1H[30;93H   [3;1H[30;1H[1m-- INSERT --[m[30;103H[K[30;103H3,1[11CAll[3;1H[?25h[?25l[4;1H[K[30;103H4[4;1H[?25h[?25la[30;105H2[4;2H[?25h[?25ls[30;105H3[4;3H[?25h[?25ld[30;105H4[4;4H[?25h[?25l[4;3H[K[30;105H3[4;3H[?25h[?25l[4;2H[K[30;105H2[4;2H[?25h[?25l[4;1H[K[30;105H1[4;1H[?25h[?25l[94m~                                                                                                                       [m[30;103H3[3;1H[?25h[?25l[32mT[m[30;105H2[3;2H[?25h[?25l[32mh[m[30;105H3[3;3H[?25h[?25l[32mi[m[30;105H4[3;4H[?25h[?25l[32ms[m[30;105H5[3;5H[?25h[?25l[30;105H6[3;6H[?25h[?25li[30;105H7[3;7H[?25h[?25ls[30;105H8[3;8H[?25h[?25l[30;105H9[3;9H[?25h[?25lt[30;105H10[3;10H[?25h[?25lh[30;106H1[3;11H[?25h[?25le[30;106H2[3;12H[?25h[?25l[30;106H3[3;13H[?25h[?25ln[30;106H4[3;14H[?25h[?25le[30;106H5[3;15H[?25h[?25lw[30;106H6[3;16H[?25h[?25l[30;106H7[3;17H[?25h[?25lt[30;106H8[3;18H[?25h[?25le[30;106H9[3;19H[?25h[?25ls[30;105H20[3;20H[?25h[?25lt[30;106H1[3;21H[?25h[?25l[30;106H2[3;22H[?25h[?25lf[30;106H3[3;23H[?25h[?25li[30;106H4[3;24H[?25h[?25le[30;106H5[3;25H[?25h[?25ll[30;106H6[3;26H[?25h[?25l[30;106H7[3;27H[?25h[?25l[4;1H[K[30;103H4,1 [4;1H[?25h[?25l[30;1H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93H^V[4;1H[30;93H1x1[4;1H[30;1H[1m-- VISUAL BLOCK --[m[30;93H[K[30;93H1x1[4;1H[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93H   [4;1H[30;1H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Hq[4;1H[?25h[?25l[30;94Ha[4;1H[30;1H[1mrecording @a[m[30;13H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Hq[4;1H[30;1H[K[4;1H[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Ha[4;1H[30;93H [4;1H[30;1H[1m-- INSERT --[m[30;103H[K[30;103H4,1[11CAll[4;1H[?25h[?25lq[30;105H2[4;2H[?25h[?25la[30;105H3[4;3H[?25h[?25l![30;105H4[4;4H[?25h[?25l~[30;105H5[4;5H[?25h[?25l[5;1H[K[30;103H5,1[5;1H[?25h[?25l[94m~                                                                                                                       [m[30;103H4,5[4;5H[?25h[?25l[4;4H[K[30;105H4[4;4H[?25h[?25l[4;3H[K[30;105H3[4;3H[?25h[?25l[4;2H[K[30;105H2[4;2H[?25h[?25l[4;1H[K[30;105H1[4;1H[?25h[34m^[?25l[m[30;93H^V[4;1H[?25h[?25l[30;95H^?[4;1H [30;93H    [4;1H[34m^?[m[30;105H2-3[4;3H[?25h[?25l[4;1H[K[30;105H1  [4;1H[?25h[?25l[94m~                                                                                                                       [m[30;103H3,27[3;27H[?25h[?25l[30;1H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;93Hq[3;26H[?25h[?25l[30;94Ha[3;26H[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;93H![3;26H[?25h[?25l[30;94H^M[3;26H[30;93H   [3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;93H^M[3;26H[30;93H  [3;26H[?25h[?25l[30;93Ha[3;26H[30;93H [3;27H[30;1H[1m--c INSERT --[m [1mrecording @a[m[30;103H[K[30;103H3,27[10CAll[3;27H[?25h[?25ls[30;106H8[3;28H[?25h[?25ld[30;106H9[3;29H[?25h[?25la[30;105H30[3;30H[?25h[?25ls[30;106H1[3;31H[?25h[?25ld[30;106H2[3;32H[?25h[?25l[3;31H[K[30;106H1[3;31H[?25h[?25l[3;30H[K[30;106H0[3;30H[?25h[?25l[3;29H[K[30;105H29[3;29H[?25h[?25l[3;28H[K[30;106H8[3;28H[?25h[?25l[3;27H[K[30;106H7[3;27H[?25h[?25l[30;106H6[3;26H[?25h[?25ld[30;106H7[3;27H[?25h[?25l[3;26H[K[30;106H6[3;26H[?25h[?25l[3;25H[K[30;106H5[3;25H[?25h[?25l[3;24H[K[30;106H4[3;24H[?25h[?25ll[30;106H5[3;25H[?25h[?25le[30;106H6[3;26H[?25h[?25l[30;106H7[3;27H[?25h[?25l[4;1H[K[30;103H4,1 [4;1H[?25h[?25l[30;105H0-1[4;1H[?25h[?25l[30;93H^M[4;1H[30;93H  [4;1H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Hq[4;1H[30;1H[K[4;1H[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Ha[4;1H[30;93H [4;1H[30;1H[1m-- INSERT --[m[30;103H[K[30;103H4,1[11CAll[4;1H[?25h[?25l![30;105H2[4;2H[?25h[?25l[5;1H[K[30;103H5,1[5;1H[?25h[?25l[94m~                                                                                                                       [m[30;103H4,2[4;2H[?25h[?25l[4;1H[K[30;105H1[4;1H[?25h[?25l[30;1H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;103H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93Hq[4;1H[?25h[?25l[30;94Ha[4;1H[30;1H[1mrecording @a[m[30;13H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93H![4;1H[?25h[?25l[30;94H^M[4;1H[30;93H   [4;1H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H4,0-1[9CAll[4;1H[?25h[?25l[30;93H^M[4;1H[30;93H  [4;1H[?25h[?25l[30;93H^M[4;1H[30;93H  [4;1H[?25h[?25l[30;93H^M[4;1H[30;93H  [4;1H[?25h[?25l[30;93H^M[4;1H[30;93H  [4;1H[?25h[?25l[30;93Hs[4;1H[30;93H [4;1H[30;93Hcl[4;1H[30;93H  [4;1H[30;1H[1m--c INSERT --[m [1mrecording @a[m[30;103H[K[30;103H4,1[11CAll[4;1H[?25h[?25ld[30;105H2[4;2H[?25h[?25la[30;105H3[4;3H[?25h[?25l[4;2H[K[30;105H2[4;2H[?25h[?25l[4;1H[K[30;105H1[4;1H[?25h[34m^[?25l[m[30;93H^V[4;1H[?25h [?25l[30;93H  [4;1H[34m^C[m[30;105H2-3[4;3H[?25h[?25l[4;1H[K[30;105H1  [4;1H[?25h[?25l[94m~                                                                                                                       [m[30;103H3,27[3;27H[?25h[?25l[30;1H[1mrecording @ar[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;93H^M[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^M[3;26H[30;93H  [3;26H[?25h[?25l[30;93H`[3;26H[?25h[?25l[30;94H^[[3;26H[30;94H  [3;26H[30;94H^[[3;26H[30;93H   [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;93H^[[3;26H[30;93H  [3;26H[30;93H^[[3;26H[30;93H  [3;26H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;1H[1mrecording @a[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25l[30;93Ha[3;26H[30;93H [3;27H[30;1H[1m--c INSERT --[m [1mrecording @a[m[30;103H[K[30;103H3,27[10CAll[3;27H[?25h[?25ls[30;106H8[3;28H[?25h[?25ld[30;106H9[3;29H[?25h[?25la[30;105H30[3;30H[?25h[?25ls[30;106H1[3;31H[?25h[?25l[3;30H[K[30;106H0[3;30H[?25h[?25l[3;29H[K[30;105H29[3;29H[?25h[?25l[3;28H[K[30;106H8[3;28H[?25h[?25l[3;27H[K[30;106H7[3;27H[?25h[34m^[?25l[m[30;93H^V[3;27H[?25h[?25l[30;95H^V[3;27H [30;93H    [3;27H[34m^V[m[30;106H8-29[3;29H[?25h[?25l[3;27H[K[30;106H7   [3;27H[?25h[?25l[30;106H6[3;26H[?25h[?25l[30;1H[1mrecording @ar[m[30;13H[K[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93H^M[3;25H[30;93H  [3;25H[?25h[?25l[30;93H^M[3;25H[30;93H  [3;25H[?25h[?25l[30;93H^M[3;25H[30;93H  [3;25H[?25h[?25l[30;93H^M[3;25H[30;93H  [3;25H[?25h[?25l[30;93Ha[3;25H[30;93H [3;26H[30;1H[1m--c INSERT --[m [1mrecording @a[m[30;103H[K[30;103H3,26[10CAll[3;26H[?25h[?25ls[30;106H7[3;27H[?25h[?25ld[30;106H8[3;28H[?25h[?25lsa[30;105H30[3;30H[?25h[?25ld[30;106H1[3;31H[?25h[?25lsa[30;106H3[3;33H[?25h[?25ld[30;106H4[3;34H[?25h[?25l[3;33H[K[30;106H3[3;33H[?25h[?25l[3;32H[K[30;106H2[3;32H[?25h[?25l[3;31H[K[30;106H1[3;31H[?25h[?25l[3;30H[K[30;106H0[3;30H[?25h[?25l[3;29H[K[30;105H29[3;29H[?25h[?25l[3;28H[K[30;106H8[3;28H[?25h[?25l[3;27H[K[30;106H7[3;27H[?25h[34m^[?25l[m[30;93H^V[3;27H[?25h [?25l[30;93H  [3;27H[34m^C[m[30;106H8-29[3;29H[?25h[?25l[3;27H[K[30;106H7   [3;27H[?25h[?25l[3;26H[K[30;106H6[3;26H[?25h[?25l[30;1H[1mrecording @ar[m[30;13H[K[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93Hq[3;25H[30;1H[K[3;25H[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93H![3;25H[?25h[?25l[30;94H^M[3;25H[30;93H   [3;25H[?25h[?25l[30;93H^M[3;25H[30;93H  [3;25H[?25h[?25l[30;93Hw[3;25H[30;93H [3;25H[?25h[?25l[30;93Hq[3;25H[?25h[?25l[30;94H`[3;25H[30;93H  [3;25H[?25h[?25l[30;93H^[[3;25H[30;93H  [3;25H[30;93H^[[3;25H[30;93H  [3;25H[?25h[?25l[30;1HType  :qa!  and press <Enter> to abandon all changes and exit Vim[30;103H[K[30;103H3,25[10CAll[3;25H[?25h[?25l[30;103H[K[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93H:[3;25H[30;1H[K[30;1H:[?25hq[?25l[97m[41mE37: No write since last change (add ! to override)[3;25H[m[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93H^[[3;25H[30;93H  [3;25H[30;93H^[[3;25H[30;93H  [3;25H[?25h[?25l[30;93H:[3;25H[30;1H[K[30;1H:[?25hq[?25l[97m[41mE37: No write since last change (add ! to override)[3;25H[m[30;103H3,25[10CAll[3;25H[?25h[?25l[30;93H<20>[3;25H[30;93H    [3;25H[?25h[?25l[30;93Ha[3;25H[30;93H [3;26H[30;1H[1m-- INSERT --[m[30;13H[K[30;103H3,26[10CAll[3;26H[?25h[?25ls[30;106H7[3;27H[?25h[?25la[30;106H8[3;28H[?25h[?25ls[30;106H9[3;29H[?25h[?25ld[30;105H30[3;30H[?25h[?25la[30;106H1[3;31H[?25h[?25ls[30;106H2[3;32H[?25h[?25l[3;31H[K[30;106H1[3;31H[?25h[?25l[3;30H[K[30;106H0[3;30H[?25h[?25l[3;29H[K[30;105H29[3;29H[?25h[?25l[3;28H[K[30;106H8[3;28H[?25h[?25l[3;27H[K[30;106H7[3;27H[?25h[?25ls[30;106H8[3;28H[?25h[?25ls[30;106H9[3;29H[?25h[30;1H[K[3;28H[?25l[30;93H^[[3;28H[30;93H  [3;29H[30;103H3,28[10CAll[3;28H[?25h[?25l[30;93H:[3;28H[30;93H[K[30;1H:[?25hq[?25l[97m[41mE37: No write since last change (add ! to override)[3;28H[m[30;103H3,28[10CAll[3;28H[?25h[?25l[30;93H:[3;28H[30;1H[K[30;1H:[?25hwq[?25l[?2004l[>4;m"test.rb" [New] 3L, 51B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git commit -a -m 'Make a change'
+[?2004l[test_k 65a7c3496] Make a change
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename README.md => README (100%)
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git checkout master
+[?2004lerror: pathspec 'master' did not match any file(s) known to git
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ 
+[?2004l[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git checkout -b iss53
+[?2004lSwitched to a new branch 'iss53'
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git checkout master
+[?2004lerror: pathspec 'master' did not match any file(s) known to git
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git checkout -b hotfix
+[?2004lSwitched to a new branch 'hotfix'
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ vim index.html
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;30r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[30;1H"index.html" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[94m~                                                                                                                       [3;1H~                                                                                                                       [4;1H~                                                                                                                       [5;1H~                                                                                                                       [6;1H~                                                                                                                       [7;1H~                                                                                                                       [8;1H~                                                                                                                       [9;1H~                                                                                                                       [10;1H~                                                                                                                       [11;1H~                                                                                                                       [12;1H~                                                                                                                       [13;1H~                                                                                                                       [14;1H~                                                                                                                       [15;1H~                                                                                                                       [16;1H~                                                                                                                       [17;1H~                                                                                                                       [18;1H~                                                                                                                       [19;1H~                                                                                                                       [20;1H~                                                                                                                       [21;1H~                                                                                                                       [22;1H~                                                                                                                       [23;1H~                                                                                                                       [24;1H~                                                                                                                       [25;1H~                                                                                                                       [26;1H~                                                                                                                       [27;1H~                                                                                                                       [28;1H~                                                                                                                       [29;1H~                                                                                                                       [m[30;103H0,0-1[9CAll[1;1H[?25h[?25l[30;93Hu[1;1H[30;1HAlready at oldest change[30;93H[K[1;1H[30;103H0,0-1[9CAll[1;1H[?25h[?25l[30;93Hg[1;1H[?25h[?25l[30;93H [1;1H[30;93Hgj[1;1H[30;93H  [1;1H[?25h[?25l[30;93Hh[1;1H[30;93H [1;1H[?25h[?25l[30;93Hb[1;1H[30;93H [1;1H[?25h[?25l[30;93Hk[1;1H[30;93H [1;1H[?25h[?25l[30;93Ha[1;1H[30;93H [1;1H[30;1H[1m-- INSERT --[m[30;13H[K[30;103H0,1[11CAll[1;1H[?25h[?25lT[30;103H1,2[1;2H[?25h[?25lh[30;105H3[1;3H[?25h[?25li[30;105H4[1;4H[?25h[?25ls[30;105H5[1;5H[?25h[?25l[30;105H6[1;6H[?25h[?25li[30;105H7[1;7H[?25h[?25ls[30;105H8[1;8H[?25h[?25l[30;105H9[1;9H[?25h[?25lt[30;105H10[1;10H[?25h[?25lh[30;106H1[1;11H[?25h[?25le[30;106H2[1;12H[?25h[?25l[30;106H3[1;13H[?25h[?25ln[30;106H4[1;14H[?25h[?25le[30;106H5[1;15H[?25h[?25lw[30;106H6[1;16H[?25h[?25l[30;106H7[1;17H[?25h[?25lc[30;106H8[1;18H[?25h[?25lo[30;106H9[1;19H[?25h[?25lm[30;105H20[1;20H[?25h[?25lm[30;106H1[1;21H[?25h[?25li[30;106H2[1;22H[?25h[?25lt[30;106H3[1;23H[?25h[?25l[30;106H4[1;24H[?25h[30;1H[K[1;23H[?25l[30;93H^[[1;23H[30;93H  [1;24H[30;103H1,23[10CAll[1;23H[?25h[?25l[30;93H:[1;23H[30;93H[K[30;1H:[?25hwq[?25l[?2004l[>4;m"index.html" [New] 1L, 24B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git commit -a -m 'Fix broken email address'
+[?2004lOn branch hotfix
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m231'[m
+	[31mf[m
+	[31mindex.html[m
+	[31mtest.rb[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$  git checkout master
+[?2004lerror: pathspec 'master' did not match any file(s) known to git
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git merge hotfix
+[?2004lAlready up to date.
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git mergetool
+[?2004l
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+tortoisemerge emerge vimdiff nvimdiff
+No files need merging
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git branch -v
+[?2004l[?1h=* [32mhotfix[m 65a7c3496 Make a change[m
+  iss53 [m 65a7c3496 Make a change[m
+  main  [m f041a94e2 Merge branch 'worktree_prunable' (PR #5712)[m
+  test_k[m 65a7c3496 Make a change[m
+[K[?1l>[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ git branch --all
+[?2004l[?1h=* [32mhotfix[m[m
+  iss53[m[m
+  main[m[m
+  test_k[m[m
+  [31mremotes/origin/HEAD[m -> origin/main[m
+  [31mremotes/origin/bindings/libgit2sharp/022_1[m[m
+  [31mremotes/origin/brianmario/attr-from-tree[m[m
+  [31mremotes/origin/brianmario/revwalk-filter[m[m
+  [31mremotes/origin/brianmario/trailer-info[m[m
+  [31mremotes/origin/brianmario/trailer-list[m[m
+  [31mremotes/origin/ci[m[m
+  [31mremotes/origin/cmn/atexit-skeleton[m[m
+  [31mremotes/origin/cmn/cancellation[m[m
+  [31mremotes/origin/cmn/commit-on[m[m
+  [31mremotes/origin/cmn/ctest-jobs[m[m
+  [31mremotes/origin/cmn/delta-base-eviction[m[m
+  [31mremotes/origin/cmn/diff-binary-patch[m[m
+  [31mremotes/origin/cmn/dynamic-libssh2[m[m
+  [31mremotes/origin/cmn/example-pull[m[m
+  [31mremotes/origin/cmn/forbid-mutiurl[m[m
+  [31mremotes/origin/cmn/init-ssh[m[m
+  [31mremotes/origin/cmn/io-stream-backends[m[m
+  [31mremotes/origin/cmn/leaks[m[m
+  [31mremotes/origin/cmn/parallel-clar[m[m
+  [31mremotes/origin/cmn/pcre2[m[m
+  [31mremotes/origin/cmn/read-only-size[m[m
+  [31mremotes/origin/cmn/remote-options[m[m
+  [31mremotes/origin/cmn/repo-v1[m[m
+  [31mremotes/origin/cmn/reset-dont-free-url[m[m
+:[K[K-[Klog file: [Kss[Khh[K--[Kkk[Kee[Kyy[Kgg[Kee[Knn[K  [K--[Ktt[K  [Kee[Kdd[K22[K55[K55[K11[K99[K  [K--[KCC[K  [K""[Kkk[Kii[Kss[Khh[Koo[Krr[Kee[K..[Kdd[Koo[Krr[Kaa[Kii[K@@[Ktt[Kii[Kgg[Kee[Krr[Kaa[Knn[Kaa[Kll[Kyy[Ktt[Kii[Kcc[Kss[K..[Kcc[Koo[Kmm[K""[K[K:[K[K[7mFinishing logfile... (interrupt to abort)[27m[K[K[?1l>[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ssh-keygen -t ed25519 -C "kishore.dorai@tigeranalytics.com" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"
+[?2004lGenerating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kishore/.ssh/id_ed25519): gitpubKey
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in gitpubKey
+Your public key has been saved in gitpubKey.pub
+The key fingerprint is:
+SHA256:gQ9JoOCWzyPj8oBYLmcBerVFK69qqvG9sCP/wZDvrzg kishore.dorai@tigeranalytics.com
+The key's randomart image is:
++--[ED25519 256]--+
+|.   ..o          |
+|.... o +         |
+|.+. o * .        |
+|o.oo = o .       |
+|.o*+. . S        |
+|++o=..           |
+|B.= =            |
+|oOEB .           |
+|+=B+*+.          |
++----[SHA256]-----+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ls -al ~/.ssh
+[?2004lls: cannot access '/home/kishore/.ssh': No such file or directory
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ls
+[?2004l[0m[01;32m"231'"[0m            [34;42mci[0m         [01;32mgit.git-authors[0m  [01;32m'sh-keygen -t ed25519 -C kishore.dorai@tigeranalytics.com'[0m
+ [01;32mAUTHORS[0m          [34;42mcmake[0m      [01;32mgitpubKey[0m         [34;42msrc[0m
+ [01;32mCMakeLists.txt[0m   [34;42mdeps[0m       [01;32mgitpubKey.pub[0m     [01;32mtest.rb[0m
+ [01;32mCOPYING[0m          [34;42mdocs[0m       [34;42minclude[0m           [34;42mtests[0m
+ [01;32mREADME[0m           [34;42mexamples[0m   [01;32mindex.html[0m
+ [01;32mSECURITY.md[0m      [01;32mf[0m          [01;32mpackage.json[0m
+ [01;32mapi.docurium[0m     [34;42mfuzzers[0m    [34;42mscript[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ssh-keygen -t ed25519 -C "kishore.dorai@tigeranalytics.com" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K"
+[?2004lGenerating public/private ed25519 key pair.
+Enter file in which to save the key (/home/kishore/.ssh/id_ed25519): id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in id_rsa
+Your public key has been saved in id_rsa.pub
+The key fingerprint is:
+SHA256:cvA5MzHBXD3VVa2U2BAsThBOr92w4/jq4R4qXgkOmUM kishore.dorai@tigeranalytics.com
+The key's randomart image is:
++--[ED25519 256]--+
+|       o=+.oo*.o*|
+|       oooo = + o|
+|  E   . +oo. o . |
+| . o   o *.+  .  |
+|  = . . S + .    |
+|   + . + * .     |
+|    . o + .      |
+|    .. o +       |
+|   ....o=..      |
++----[SHA256]-----+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ clip < ~/.ssh/id_rsa.pub
+[?2004lbash: /home/kishore/.ssh/id_rsa.pub: No such file or directory
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ clip < ~/id_rsa.pub
+[?2004lbash: /home/kishore/id_rsa.pub: No such file or directory
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ls
+[?2004l[0m[01;32m"231'"[0m            [01;32mapi.docurium[0m   [01;32mf[0m                 [01;32mid_rsa.pub[0m                                                  [34;42msrc[0m
+ [01;32mAUTHORS[0m          [34;42mci[0m             [34;42mfuzzers[0m           [34;42minclude[0m                                                     [01;32mtest.rb[0m
+ [01;32mCMakeLists.txt[0m   [34;42mcmake[0m          [01;32mgit.git-authors[0m   [01;32mindex.html[0m                                                  [34;42mtests[0m
+ [01;32mCOPYING[0m          [34;42mdeps[0m           [01;32mgitpubKey[0m         [01;32mpackage.json[0m
+ [01;32mREADME[0m           [34;42mdocs[0m           [01;32mgitpubKey.pub[0m     [34;42mscript[0m
+ [01;32mSECURITY.md[0m      [34;42mexamples[0m       [01;32mid_rsa[0m           [01;32m'sh-keygen -t ed25519 -C kishore.dorai@tigeranalytics.com'[0m
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ ssh-keygen -t rsa -b 4096 -C "kishore.dorai@tigeranalytics.com"
+[?2004lGenerating public/private rsa key pair.
+Enter file in which to save the key (/home/kishore/.ssh/id_rsa): pubkey
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in pubkey
+Your public key has been saved in pubkey.pub
+The key fingerprint is:
+SHA256:sguv47kUzknd1i9lx2UH9T1luKJQtroYmC/HGtoS2VU kishore.dorai@tigeranalytics.com
+The key's randomart image is:
++---[RSA 4096]----+
+|              .o+|
+|        E o   .o+|
+|       . o .   o*|
+|     ...... ...oo|
+|   oo+o So..o.o  |
+|  o++o.+. .+ .   |
+|   .Bo.o .. .    |
+|  .+o==..  .     |
+|  .oBBo          |
++----[SHA256]-----+
+[?2004h]0;kishore@TIGER02150: /mnt/c/Users/kishore.dorai/test/mylibgit[01;32mkishore@TIGER02150[00m:[01;34m/mnt/c/Users/kishore.dorai/test/mylibgit[00m$ exit
+[?2004lexit
+
+Script done on 2023-06-09 11:45:48+05:30 [COMMAND_EXIT_CODE="0"]
